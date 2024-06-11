@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Profile</title>
+</head>
+<body>
+    <h1>Student Profile</h1>
+    <p>First Name: {{ student.first_name }}</p>
+    <p>Middle Name: {{ student.middle_name }}</p>
+    <p>Last Name: {{ student.last_name }}</p>
+    <p>Date of Birth: {{ student.date_of_birth }}</p>
+    <p>Email: {{ student.email }}</p>
+    <p>Phone: {{ student.phone }}</p>
+    <p>Faculty: {{ student.faculty.name }}</p>
+    <p>Speciality: {{ student.speciality.name }}</p>
+    <p>Status: {{ student.status.name }}</p>
+    <a href="{% url 'edit_student_profile' student.id %}">Edit Profile</a>
+</body>
+</html>
