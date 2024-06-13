@@ -1,5 +1,6 @@
 from django.db import models
 
+
 # Create your models here.
 
 class Faculty(models.Model):
@@ -79,4 +80,8 @@ class Student(models.Model):
     status = models.ForeignKey(StudentStatus, on_delete=models.CASCADE)
 
     def __str__(self):
-        return f"{self.first_name} {self.last_name}"
+        return f"{self.id} {self.last_name} {self.first_name} {self.middle_name}"
+
+    @property
+    def formatted_id(self):
+        return f"{self.id:06d}"
